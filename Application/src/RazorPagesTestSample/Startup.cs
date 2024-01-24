@@ -14,10 +14,18 @@ namespace RazorPagesTestSample
             services.AddDbContext<AppDbContext>(options => options.UseInMemoryDatabase("InMemoryDb"));
 
             services.AddRazorPages();
+
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+
+            // Write a loop from 0 to 10 and print out the numeric value of the iterator for each loop iteration
+            for (int i = 0; i < 10; i++)
+            {
+                System.Console.WriteLine(i);
+            }
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
